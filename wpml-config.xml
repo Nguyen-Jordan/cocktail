@@ -1,0 +1,12 @@
+<wpml-config>
+	<admin-texts>
+		<key name="cocktail_theme_options">
+			<key name="cocktail_search_text" />
+			<key name="cocktail_img-upload-footer-image" />
+			<key name="cocktail_header_image_title" />
+			<key name="cocktail_header_image_link" />
+			<key name="cocktail_footer_posts_title" />
+			<key name="cocktail_footer_posts_description" />
+		</key>
+	</admin-texts>
+</wpml-config>
