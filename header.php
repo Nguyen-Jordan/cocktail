@@ -52,7 +52,7 @@ wp_head(); ?>
 						</div> <!-- end .header-left -->
 					
 
-						<?php do_action('cocktail_site_branding'); ?>
+
 
 						<div class="header-right">
 						<?php $cocktail_side_menu = $cocktail_settings['cocktail_side_menu'];
@@ -102,14 +102,6 @@ wp_head(); ?>
 										</div><!-- end .side-menu -->
 									</aside><!-- end .side-menu-wrap -->
 								<?php }
-
-								  	if (1 != $search_form) { ?>
-									<button id="search-toggle" class="header-search" type="button"></button>
-										<div id="search-box" class="clearfix">
-											<div class="search-x"></div>
-												<?php get_search_form();?>
-										</div>  <!-- end #search-box -->
-									<?php }
 							} ?>
 						</div> <!-- end .header-right -->
 					</div> <!-- end .wrap -->
@@ -119,7 +111,7 @@ wp_head(); ?>
 						<!-- Main Nav ============================================= -->
 						<div id="sticky-header" class="clearfix">
 							<nav id="site-navigation" class="main-navigation clearfix" role="navigation" aria-label="<?php esc_attr_e('Main Menu','cocktail');?>">
-
+                                <?php  do_action('cocktail_site_branding'); ?>
 							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 								<span class="line-bar"></span>
 						  	</button> <!-- end .menu-toggle -->
@@ -134,6 +126,15 @@ wp_head(); ?>
 								} else {// extract the content from page menu only
 								wp_page_menu(array('menu_class' => 'menu', 'items_wrap'     => '<ul id="primary-menu" class="menu nav-menu">%3$s</ul>'));
 								} ?>
+                                <?php
+                                if (1 != $search_form) { ?>
+                                    <button id="search-toggle" class="header-search" type="button"></button>
+                                    <div id="search-box" class="clearfix">
+                                        <div class="search-x"></div>
+                                        <?php get_search_form();?>
+                                    </div>  <!-- end #search-box -->
+                                <?php }
+                                ?>
 							</nav> <!-- end #site-navigation -->
 						</div> <!-- end #sticky-header -->
 					<?php } ?>
